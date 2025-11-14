@@ -1,0 +1,19 @@
+<footer>
+
+  <p class="logo"><a href="${ tacs.root }" title="${ tacs.config.title }">
+
+    <svg class="tezos" width="32"><use xlink:href="#tezoslogo"></use></svg>
+    <svg class="spotlight" width="140"><use xlink:href="#uraniumlogo"></use></svg>
+
+  </a></p>
+
+  <ul class="social linklist">
+    ${ tacs.config.socialLinks.map(s => `<li><a href="${ s.url }">${ s.link }</a></li>`) }
+  </ul>
+
+  <ul class="links linklist">
+    <li>&copy; Copyright ${ tacs.config.title } ${ tacs.fn.format.dateYear() }</li>
+    ${ tacs.config.footerLinks.map(f => `<li><a href="${ f.url }">${ f.link }</a></li>`) }
+  </ul>
+
+</footer>

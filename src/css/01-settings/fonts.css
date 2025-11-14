@@ -1,0 +1,78 @@
+/* heading */
+@font-face {
+  font-family: Raptor;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(/media/fonts/raptor-v2-600.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Head Fallback';
+  src: local('Verdana'), local('Roboto'), sans-serif;
+  size-adjust: 108%;
+  ascent-override: normal;
+  descent-override: normal;
+  line-gap-override: 34%;
+}
+
+/* body */
+@font-face {
+  font-family: Inter;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(/media/fonts/inter.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Body Fallback';
+  src: local('Arial'), sans-serif;
+  size-adjust: 109%;
+  ascent-override: normal;
+  descent-override: normal;
+  line-gap-override: 5%;
+}
+
+/* monospace */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Roboto Mono'), url(/media/fonts/Roboto-mono-400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: local('Roboto Mono'), url(/media/fonts/Roboto-mono-400italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Roboto Mono'), url(/media/fonts/Roboto-mono-600.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: local('Roboto Mono'), url(/media/fonts/Roboto-mono-600italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Mono Fallback';
+  src: monospace;
+  size-adjust: 72%;
+  ascent-override: 98%;
+  descent-override: normal;
+  line-gap-override: 7%;
+}
