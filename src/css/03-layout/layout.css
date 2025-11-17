@@ -1,4 +1,4 @@
-header, main, aside, footer {
+header, .warn, main, aside, footer {
 
   padding-block: 0;
   padding-inline: var(--pad);
@@ -17,7 +17,7 @@ main, aside, footer {
   margin-block-start: 4em;
 }
 
-:is(header, footer) > * {
+:is(header, footer, .warn) > * {
   max-inline-size: var(--maxwidth-page);
 }
 

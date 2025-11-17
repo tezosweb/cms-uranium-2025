@@ -10,20 +10,6 @@ body {
   margin: 0;
   color: var(--color-fore0);
   background-color: var(--color-back0);
-
-  /* background gradient */
-  &::before {
-    content: '';
-    position: absolute;
-    inline-size: 100%;
-    block-size: 100%;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    background-image:
-      radial-gradient(ellipse farthest-corner at 70% -10% in hsl shorter hue, var(--color-hint1-trans) 0%, var(--color-hint0-trans) 10%, transparent 50%),
-      radial-gradient(ellipse farthest-corner at -20% 60% in hsl shorter hue, var(--color-hint1-trans) 0%, transparent 50%);
-    z-index: -1;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -139,6 +125,29 @@ a.headlink {
     visibility: visible;
   }
 
+}
+
+a.button {
+  inline-size: fit-content;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border-radius: var(--radius0);
+
+  svg {
+    inline-size: 1.2em;
+    block-size: 1.2em;
+  }
+
+  &:link, &:visited {
+    color: var(--color-fore0);
+    background-color: var(--color-back2);
+  }
+
+  &:hover, &:active, &:focus {
+    color: var(--color-back0);
+    background-color: var(--color-hint1);
+  }
 }
 
 svg {

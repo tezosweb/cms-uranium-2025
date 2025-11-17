@@ -13,12 +13,8 @@ import * as fnHooks from './lib/hooks.js';
 
 const
   // fetch CMS data
-  cmsData = await cmsFetch();
+  cmsData = await cmsFetch(),
 
-console.dir(cmsData.type, { depth: null, color: true });
-// process.exit();
-
-const
   // Publican configuration
   publican = new Publican(),
   isDev = (env('NODE_ENV') === 'development'),
@@ -94,8 +90,6 @@ postTopic.forEach(topic => {
 
   if (topic) {
 
-    console.log(topic.name, topic.slug);
-
     publican.config.groupPages.list[ topic.name ] = {
       root: `${ topicRoot }/${ topic.slug }/`
     };
@@ -144,8 +138,6 @@ cmsData.post.forEach(p => {
 
     // add to groups
     const pTopic = postTopic?.[ p.topic_type ]?.name || '';
-
-    console.log(p.slug, pTopic);
 
     if (pTopic) {
       groups.push( pTopic );
@@ -342,6 +334,8 @@ tacs.config.cspImage = isProd ? '' : imgRoot;
 tacs.config.keywords = (cmsData.settings.keywords || []).join(', ');
 tacs.config.postsMax = postsMax;
 tacs.config.relatedMax = relatedMax;
+tacs.config.footerTitle = (cmsData.settings?.footer_title || '').trim().replace(/\s+/g, ' ');
+tacs.config.footerContent = (cmsData.settings?.footer_content || '').split('\n').map(p => p.replace(/\s+/g, ' ').trim()).filter(p => p).join(' ');
 tacs.config.relatedTitle = (cmsData.settings?.related_title || '').trim().replace(/\s+/g, ' ');
 tacs.config.relatedContent = (cmsData.settings?.related_content || '').split('\n').map(p => p.replace(/\s+/g, ' ').trim()).filter(p => p).map(p => `<p>${ p }</p>`).join('\n');
 tacs.config.canonical = cmsData.settings?.canonical_url;
@@ -392,7 +386,7 @@ const buildCSS = await esbuild.context({
   entryPoints: [ `${ src }css/main.css` ],
   bundle: true,
   target,
-  external: ['/media/fonts/*', '/media/images/*'],
+  external: ['/media/fonts/*', '/media/static/*'],
   loader: {
     '.woff2': 'file',
     '.avif': 'file',

@@ -9,6 +9,7 @@
   --font-weight-bold: 700;
 
   --fsize-0: calc(18em / 16);
+  --vfsize--1: clamp(0.78rem, 0.71rem + 0.33vw, 1rem);
 
   --fsize--1: calc(var(--fsize-0) * 0.9);
   --fsize--2: calc(var(--fsize-0) * 0.8);
@@ -28,7 +29,7 @@
   --pad-pagelist0: 16px;
   --pad-pagelist1: calc(var(--pad-pagelist0) * 1.5);
 
-  --maxwidth-page: 1440px;
+  --maxwidth-page: 1512px;
   --maxwidth-index: 1072px;
   --maxwidth-post: 812px;
 

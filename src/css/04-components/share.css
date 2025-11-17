@@ -1,7 +1,7 @@
 /* share icons */
 .share {
 
-  gap: 8px;
+  gap: 12px;
 
   span {
     display: none;
@@ -21,7 +21,7 @@
 
   a:link, a:visited {
     display: block;
-    background-color: var(--color-back3);
+    background-color: var(--color-back4);
     border-radius: var(--radius0);
   }
 

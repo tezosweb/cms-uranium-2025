@@ -2,36 +2,100 @@ footer {
 
   position: sticky;
   inset-block-start: 100vh;
+  padding-block: 3em;
+  color: var(--color-back0);
+  background: var(--color-fore0) url("/media/static/footer.svg") 100% 0 no-repeat;
+  background-size: auto 100%;
 
-  font-size: var(--fsize--2);
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-items: center;
-
-  padding-inline: 0;
-
-  color: var(--color-fore1);
-  background-color: var(--color-back0);
-
-  border-block-start: 1px solid;
-  border-block-end: 6px solid;
-  border-image-slice: 1;
-  border-image-source: var(--color-grad0);
-
-  .logo {
-    padding-block: 3em 2em;
+  > * {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
   }
 
-  .links {
-    box-sizing: border-box;
-    inline-size: 100%;
-    max-inline-size: none;
-    justify-content: center;
-    padding: 1.5em;
+  > *:first-child {
+    justify-content: space-between;
+  }
+
+  .linklist {
+    font-size: var(--fsize--2);
+  }
+
+  a:link, a:visited, .logo a, .logo strong {
+    color: var(--color-back0);
+  }
+
+  a:hover, a:active, a:focus {
+    color: var(--color-back2);
+  }
+
+  .logo span {
+    border-color: var(--color-back3);
+  }
+
+  hr {
+    margin-block: 3em;
+    border-block-start-color: var(--color-back3);
+  }
+
+}
+
+.terms {
+  margin-block-start: 1em;
+}
+
+.powered {
+
+  p {
+    font-size: var(--fsize--3);
+    text-align: center;
+  }
+
+  ul, li, img {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    margin-block-start: 3em;
-    border-block-start: 1px solid var(--color-back1);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-block-start: 8px;
+  }
+
+  li {
+    inline-size: 75px;
+    padding: 15px 20px;
+    background-color: var(--color-back4);
+    border-radius: var(--radius0);
+  }
+
+  img {
+    aspect-ratio: 75 / 25;
+  }
+
+}
+
+@media (width > 48em) {
+
+  footer {
+
+    > * {
+      justify-content: space-between;
+    }
+
+    .linklist {
+      justify-content: start;
+    }
+
+    .powered p {
+      text-align: start;
+    }
+
   }
 
 }

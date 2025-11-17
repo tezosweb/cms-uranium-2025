@@ -18,13 +18,8 @@
     margin: 0;
   }
 
-  a:link, a:visited {
+  a {
     text-decoration: none;
-    color: var(--color-fore1);
-  }
-
-  a:hover, a:active, a:focus {
-    color: var(--color-fore0);
   }
 
 }

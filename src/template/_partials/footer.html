@@ -1,19 +1,45 @@
 <footer>
 
-  <p class="logo"><a href="${ tacs.root }" title="${ tacs.config.title }">
+  <div>
 
-    <svg class="tezos" width="32"><use xlink:href="#tezoslogo"></use></svg>
-    <svg class="spotlight" width="140"><use xlink:href="#uraniumlogo"></use></svg>
+    <p class="logo"><a href="${ tacs.root }" title="${ tacs.config.title }">
 
-  </a></p>
+      <svg class="uranium" width="160"><use xlink:href="#uraniumlogo"></use></svg>
+      ${ tacs.config.footerTitle ? `<span><strong>${ tacs.config.footerTitle }</strong>${ tacs.config.footerContent }</span>` : '' }
 
-  <ul class="social linklist">
-    ${ tacs.config.socialLinks.map(s => `<li><a href="${ s.url }">${ s.link }</a></li>`) }
-  </ul>
+    </a></p>
 
-  <ul class="links linklist">
-    <li>&copy; Copyright ${ tacs.config.title } ${ tacs.fn.format.dateYear() }</li>
-    ${ tacs.config.footerLinks.map(f => `<li><a href="${ f.url }">${ f.link }</a></li>`) }
-  </ul>
+    <p><a href="https://uranium.io/" title="return to the Uranium.io home page" class="button">Uranium.io<svg class="spotlight" width="20"><use xlink:href="#arr-ur"></use></svg></a></p>
+
+  </div>
+
+  <hr>
+
+  <div>
+
+    <div>
+
+      <ul class="share linklist">
+        ${ tacs.config.socialLinks.map(s => `<li><a href="${ s.url }" title="${ s.link }"><svg><use xlink:href="#icon-${ s.link.replace(/\W/g,'').toLowerCase() }"></use></svg> <span>${ s.link }</span></a></li>`) }
+      </ul>
+
+      <ul class="terms linklist">
+        ${ tacs.config.footerLinks.map(f => `<li><a href="${ f.url }">${ f.link }</a></li>`) }
+      </ul>
+
+    </div>
+
+    <div class="powered">
+      <p>Powered by</p>
+
+      <ul>
+        <li><img src="${ tacs.root }media/static/curzon.svg" width="75" height="25" alt="Curzon Uranium" loading="lazy"></li>
+        <li><img src="${ tacs.root }media/static/tezos.svg" width="75" height="25" alt="Tezos" loading="lazy"></li>
+        <li><img src="${ tacs.root }media/static/archax.svg" width="75" height="25" alt="Archax" loading="lazy"></li>
+      </ul>
+
+    </div>
+
+  </div>
 
 </footer>
