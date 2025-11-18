@@ -22,7 +22,7 @@
     padding-inline-start: 1.5em;
     margin-inline-start: 1em;
     color: var(--color-back2);
-    border-inline-start: 1px solid var(--color-back1);
+    border-inline-start: 1px solid var(--color-back2);
   }
 
   strong {
