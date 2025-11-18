@@ -1,19 +1,19 @@
 header, .warn, main, aside, footer {
 
-  padding-block: 0;
-  padding-inline: var(--pad);
+  padding: 0;
   margin-block: 0;
   margin-inline: auto;
 
   > * {
     max-inline-size: var(--maxwidth-post);
     padding: 0;
+    padding-inline: var(--pad);
     margin-inline: auto;
   }
 
 }
 
-main, aside, footer {
+aside, footer {
   margin-block-start: 4em;
 }
 
@@ -21,6 +21,17 @@ main, aside, footer {
   max-inline-size: var(--maxwidth-page);
 }
 
-main > :is(h1, .full, .featured, .pagelist, .pagination), aside.related > * {
+main > :is(h1, .featured, .navtopic, .pagelist, .pagination), aside.related > *, .full > * {
   max-inline-size: var(--maxwidth-index);
+  margin-inline: auto;
+}
+
+main > .full {
+  max-inline-size: none;
+  padding-block: var(--pad2);
+  background-color: var(--color-fore1);
+
+  & :first-child {
+    margin-block-start: 0;
+  }
 }

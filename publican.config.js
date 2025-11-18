@@ -75,10 +75,10 @@ publican.config.groupPages = {
   index: 'monthly',
   template: env('TEMPLATE_GROUP', templateDefault),
   list: {
-    'article': {
+    'all': {
       root: ''
     },
-    'article-old': {
+    'all-old': {
       root: 'old',
       sortOrder: 1
     }
@@ -148,8 +148,8 @@ cmsData.post.forEach(p => {
       groups.push( 'featured' );
     }
     if (p.slug !== homeFeatured) {
-      groups.push( 'article' );
-      groups.push( 'article-old' );
+      groups.push( 'all' );
+      groups.push( 'all-old' );
     }
     if (rssCount < rssMax) {
       rssCount++;
@@ -198,8 +198,8 @@ date: ${ p.date }
 menu: false
 priority: 1
 index: monthly
-type: ${ postType?.[ p.post_type ]?.name || 'Article' }
-typeSlug: ${ postType?.[ p.post_type ]?.slug || 'article' }
+type: ${ postType?.[ p.post_type ]?.name || 'All' }
+typeSlug: ${ postType?.[ p.post_type ]?.slug || '' }
 topic: ${ postTopic?.[ p.topic_type ]?.name || 'Insight' }
 topicSlug: ${ postTopic?.[ p.topic_type ]?.slug || 'insight' }
 ${ p.feature_post ? 'featured: true' : '' }

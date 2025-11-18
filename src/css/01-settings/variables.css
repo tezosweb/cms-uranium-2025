@@ -26,6 +26,7 @@
 
   --pad: 24px;
   --pad2: calc(var(--pad) * 2);
+  --pad4: calc(var(--pad) * 4);
   --pad-pagelist0: 16px;
   --pad-pagelist1: calc(var(--pad-pagelist0) * 1.5);
 
@@ -42,6 +43,8 @@
 
   --color-fore0: oklch(0.296 0.053 217.1);
   --color-fore1: oklch(0.317 0.053 220.9);
+  --color-fore2: oklch(0.556 0.000 0);
+  --color-fore3: oklch(0.657 0.088 210.0);
 
   --color-hint0: oklch(0.609 0.203 272);
   --color-hint1: oklch(0.390 0.127 336.1);

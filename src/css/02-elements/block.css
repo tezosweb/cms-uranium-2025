@@ -27,6 +27,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: var(--fsize-4); }
+
+h1 span {
+  color: var(--color-fore3);
+}
+
+h1.home {
+  display: none;
+}
+
+h1.topic a {
+  text-decoration: none;
+}
+
 h2 { font-size: var(--fsize-2); }
 h3 { font-size: var(--fsize-1); }
 
