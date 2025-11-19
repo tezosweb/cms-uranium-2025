@@ -1,8 +1,10 @@
 /* post title */
 .title {
 
+  margin-block-start: 3em;
+
   > .linklist {
-    margin-block-start: 3em;
+    margin-block-start: 2em;
 
     @media (width > 40rem) {
 
@@ -15,9 +17,31 @@
 
 }
 
-.readtime, .pubdate {
+.topic {
+  font-size: var(--fsize--2);
+
+  &::after {
+    display: inline-block;
+    content: '\25BA';
+    font-size: 0.6em;
+    vertical-align: middle;
+    margin-inline-start: 0.5em;
+    color: var(--color-back3);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.author, .readtime, .pubdate {
   font-size: var(--fsize--3);
   color: var(--color-fore1);
+
+  svg {
+    inline-size: auto;
+  }
 }
 
 .hero {

@@ -1,18 +1,19 @@
-<aside class="postfoot">
+<aside class="postfoot"><div class="postcontent">
 
-  <h2>Share this post</h2>
+  <h2><svg width="30" height="30"><use xlink:href="#icon-share"></use></svg> Share this post</h2>
 
   <div>
     ${ include('_post/share.html') }
   </div>
 
-  <hr>
-
   <div>
-    ${ include('_post/organization.html') }
     ${ include('_post/author.html') }
+
+    ${ include('_post/date.html') }
+
+    ${ include('_post/readtime.html') }
   </div>
 
-</aside>
+</div></aside>
 
 ${ include('_post/related.html') }

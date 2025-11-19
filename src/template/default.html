@@ -4,11 +4,19 @@ ${ include('_partials/header.html') }
 
 <main>
 
-  ${ include('_post/title.html') }
+  <div class="postfull">
+    <nav-heading title="On this page" class="pagecontents"></nav-heading>
+  </div>
 
-  ${ data.content }
+  <div class="postcontent">
 
-  ${ include('_post/structured-data.html') }
+    ${ include('_post/title.html') }
+
+    ${ data.content }
+
+    ${ include('_post/structured-data.html') }
+
+  </div>
 
 </main>
 

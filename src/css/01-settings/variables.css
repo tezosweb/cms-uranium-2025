@@ -19,7 +19,8 @@
   --fsize-1: calc(var(--fsize-0) * 1.25);
   --fsize-2: calc(var(--fsize-0) * 1.5);
   --fsize-3: calc(var(--fsize-0) * 1.75);
-  --fsize-4: calc(var(--fsize-0) * 2.4);
+  --fsize-4: calc(var(--fsize-0) * 3.0);
+  --vfsize-4: clamp(2.2rem, 1.5rem + 2vw, 3.5rem);
 
   --lh-head: 1.2;
   --lh-0: calc(28 / 18);
@@ -31,7 +32,7 @@
   --pad-pagelist1: calc(var(--pad-pagelist0) * 1.5);
 
   --maxwidth-page: 1512px;
-  --maxwidth-index: 1072px;
+  --maxwidth-index: 1232px;
   --maxwidth-post: 812px;
 
   --color-back0: oklch(1.000 0.000 0);
@@ -59,10 +60,6 @@
 
   --color-hint0-trans: color-mix(in oklab, var(--color-hint0), transparent 80%);
   --color-hint1-trans: color-mix(in oklab, var(--color-hint1), transparent 80%);
-
-  --color-grad0: linear-gradient(in oklab 90deg, var(--color-hint1), var(--color-hint0), var(--color-hint1));
-  --color-grad135: linear-gradient(in oklab 135deg, var(--color-hint0), var(--color-hint1));
-  --color-gradback:
 
   --color-code-fore: light-dark(#393a34, #c5c8c6);
   --color-code-back: light-dark(#f2f4f6, #1d1f21);

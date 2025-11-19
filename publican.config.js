@@ -55,7 +55,8 @@ publican.config.defaultHTMLTemplate = templateDefault;
 publican.config.dirPages.template = env('TEMPLATE_LIST', templateDefault);
 publican.config.tagPages.template = env('TEMPLATE_TAG', templateDefault);
 
-// default syntax language
+// markdown options
+publican.config.markdownOptions.core.linkify = false;
 publican.config.markdownOptions.prism.defaultLanguage = 'bash';
 
 // menus disabled

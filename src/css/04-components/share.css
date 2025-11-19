@@ -21,8 +21,14 @@
 
   a:link, a:visited {
     display: block;
-    background-color: var(--color-back4);
+    color: var(--color-fore0);
+    background-color: var(--color-back1);
     border-radius: var(--radius0);
+  }
+
+  a:hover, a:active, a:focus {
+    color: var(--color-back0);
+    background-color: var(--color-back5);
   }
 
 }

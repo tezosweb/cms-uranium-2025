@@ -6,13 +6,11 @@
 
   ${ data.showDescription && data.description ? `<p class="description">${ data.description }</p>` : '' }
 
-  <nav-heading class="pagecontents"></nav-heading>
-
   <div class="linklist">
 
-    ${ include('_post/readtime.html') }
-
     ${ include('_post/date.html') }
+
+    ${ include('_post/readtime.html') }
 
     ${ include('_post/share.html') }
 

@@ -13,6 +13,14 @@ header, .warn, main, aside, footer {
 
 }
 
+@media (width > 1184px) {
+
+  .postcontent {
+    padding-inline-end: calc(1184px - var(--maxwidth-post) + var(--pad) * 3);
+  }
+
+}
+
 aside, footer {
   margin-block-start: 4em;
 }
@@ -21,7 +29,7 @@ aside, footer {
   max-inline-size: var(--maxwidth-page);
 }
 
-main > :is(h1, .featured, .navtopic, .pagelist, .pagination), aside.related > *, .full > * {
+main > :is(h1, .postfull, .featured, .navtopic, .pagelist, .pagination), aside.related > *, .full > * {
   max-inline-size: var(--maxwidth-index);
   margin-inline: auto;
 }

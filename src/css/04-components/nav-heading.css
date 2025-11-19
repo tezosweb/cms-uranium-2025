@@ -2,38 +2,79 @@
 .pagecontents {
 
   display: block;
-  font-size: var(--fsize--1);
-  margin-block: 1.5em;
+  padding: 1em;
+  color: var(--color-back5);
+  background-color: var(--color-back1);
 
-  .contents {
-    margin-block-start: 0.5em;
-  }
+  summary {
+    font-size: var(--fsize--1);
+    padding-inline-start: 30px;
+    margin-block-end: 0.5em;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8v2zM8 11h12v2H8zm0 5h12v2H8z"/></svg>') 0 0.1em no-repeat;
+    background-size: 24px;
+    cursor: pointer;
 
-  li {
-    padding-block-end: 2px;
-    margin-block: 0.1em;
-  }
+    &::marker { content: ''; }
+    &::-webkit-details-marker { display: none }
 
-  a.active, a.active code {
-    color: var(--color-fore2);
-  }
-
-  @media (width > 1365px) and (height > 600px) {
-
-    position: fixed;
-    inset-block-start: auto;
-    inset-block-end: auto;
-    inset-inline-start: auto;
-    inset-inline-end: 0;
-    inline-size: auto;
-    margin-block: 0;
-    overflow-y: auto;
-
-    & > details {
-      margin-block: var(--layout-margin);
-      margin-inline-start: 0.8em;
+    &::after {
+      display: inline-block;
+      font-size: 0.6em;
+      text-align: center;
+      vertical-align: middle;
+      content: '\25bc';
+      inline-size: 1.5rem;
+      transition: transform 0.3s ease-out;
     }
 
+  }
+
+  details:not([open]) > summary::after {
+    transform: rotate(0deg);
+  }
+
+  details[open] > summary::after {
+    transform: rotate(-540deg);
+  }
+
+  ol, li, a {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    font-size: var(--fsize--2);
+    text-decoration: none;
+    padding-block: 0.4em;
+    padding-inline-start: 0.9em;
+    margin-inline-start: 0.9em;
+    color: var(--color-back3);
+    border-inline-start: 2px solid var(--color-hint0-trans);
+  }
+
+  a:hover, a:active, a:focus {
+    color: var(--color-back5);
+  }
+
+  a.active {
+    color: var(--color-back5);
+    border-color: var(--color-back5);
+  }
+
+}
+
+@media (width > 1184px) and (height > 600px) {
+
+  .postfull {
+    position: sticky;
+    inset-block-start: 5em;
+  }
+
+  .pagecontents {
+    float: inline-end;
+    inline-size: calc(1184px - var(--maxwidth-post) - var(--pad) * 2);
   }
 
 }

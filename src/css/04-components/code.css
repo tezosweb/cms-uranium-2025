@@ -26,12 +26,6 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
-.filename + pre[class*="language-"] {
-	padding-block-start: 0.5em;
-	margin-block-start: 0;
-	border-start-start-radius: 0;
-}
-
 :not(pre) > code[class*="language-"],
 pre[class*="language-"], .copycode {
 	background-color: var(--color-code-back);

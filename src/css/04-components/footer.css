@@ -36,6 +36,8 @@ footer {
   }
 
   hr {
+    box-sizing: border-box;
+    max-inline-size: 100%;
     margin-block: 3em;
     border-block-start-color: var(--color-back3);
   }

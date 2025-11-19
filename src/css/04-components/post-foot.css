@@ -1,35 +1,38 @@
 /* post foot */
-.postfoot {
+.postfoot .postcontent {
+
+  > * {
+    padding: var(--pad);
+    margin: 0;
+    background-color: var(--color-back1);
+
+    &:last-child {
+      padding-block-end: var(--pad);
+    }
+  }
 
   > div {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    margin-block-start: 1.5em;
+    padding-block: 0;
   }
 
-  .topic {
-    margin-inline-start: auto;
+  h2 {
+    font-size: var(--fsize-1);
   }
 
-  .organization, .author {
+  svg {
+    inline-size: auto;
+  }
 
-    margin-block-start: 0;
-
-    span {
-      font-size: var(--fsize--3);
-      color: var(--color-fore1);
+  .share {
+    a:link, a:visited {
+      background-color: var(--color-hint0-trans);
     }
 
-    strong {
-      display: block;
-      font-weight: var(--font-weight-normal);
-      font-size: var(--fsize--2);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+    a:hover, a:active, a:focus {
+      background-color: var(--color-back5);
     }
 
   }

@@ -26,7 +26,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1 { font-size: var(--fsize-4); }
+h1 {
+  font-size: var(--vfsize-4);
+  margin-block-start: 0.5em;
+}
 
 h1 span {
   color: var(--color-fore3);
@@ -60,7 +63,6 @@ ol {
 li {
   padding-inline-start: 0.2em;
   margin-block-start: 1em;
-  margin-inline-start: 1.3em;
 }
 
 details::details-content {
@@ -77,8 +79,9 @@ details[open]::details-content {
 }
 
 blockquote {
+  margin-inline: 0;
   margin-block-end: 2rem;
-  border-inline-start: 2px solid var(--color-fore0);
+  border-inline-start: 2px solid var(--color-back2);
 
   :first-child {
     margin-block-start: 0;
