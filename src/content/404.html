@@ -1,12 +1,12 @@
 ---
 title: Page not found
 slug: 404.html
-description: Sorry, but the page you're looking for was not found. Please use the menus or tags.
-template: list.html
+description: Sorry, but the page you're looking for was not found.
+template: default.html
 priority: 0
 index: false
 ---
 
 <p>${ data.description }</p>
 
-${ tacs.fn.nav.tagList() }
+<p>Please <a href="${ tacs.root }">return to the home page</a>.</p>

@@ -20,7 +20,7 @@ ${ include('_partials/header.html') }
 
 </main>
 
-${ include('_post/foot.html') }
+${ data.index ? `${ include('_post/foot.html') }` : '' }
 
 ${ include('_partials/footer.html') }
 

@@ -19,7 +19,7 @@ th, td {
 	vertical-align: middle;
   padding: 0.2em 0.5em;
   margin: 0;
-  border: 1px solid var(--color-back3);
+  border: 1px solid var(--color-back2);
   user-select: all;
 
   &.right {
@@ -37,7 +37,7 @@ th, td {
 
 thead th {
   font-weight: bold;
-  background-color: var(--color-hint0);
+  background-color: var(--color-back2);
 }
 
 tbody > :nth-child(even) {
