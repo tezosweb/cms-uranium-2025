@@ -6,11 +6,11 @@
 
     ${ (tacs.config.topic || []).filter(t => t).sort((a,b) => a.sort - b.sort).map(t => t && `<li${ data.isGroupIndex === t.name || data.isGroupIndex === t.name + '-old' ? ' class="active"' : '' }><a href="${ tacs.config.topicRoot }${ t.slug }/">${ t.name }</a></li>`) }
 
-    <li class="order">${
+    <li class="order">${ data.childPageTotal > 1 ? (
       data.link.endsWith('/old/') ?
         `<a href="${ data.link.replace('/old/', '/') }" class="old" title="show newest first">Oldest First</a>` :
         `<a href="${ data.link }old/" class="new" title="show oldest first">Newest First</a>`
-    }</li>
+    ) : ''}</li>
 
   </ul>
 
