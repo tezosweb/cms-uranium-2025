@@ -2,7 +2,7 @@
 
   ${ include('_post/topic.html') }
 
-  <h1>${ data.title }</h1>
+  <h1>${ tacs.fn.format.title( data.title ) }</h1>
 
   ${ data.showDescription && data.description ? `<p class="description">${ data.description }</p>` : '' }
 
