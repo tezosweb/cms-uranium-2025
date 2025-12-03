@@ -31,7 +31,7 @@ h1 {
   margin-block-start: 0.5em;
 }
 
-h1 span {
+h1 span, h2 span, h3 span {
   color: var(--color-fore3);
 }
 
