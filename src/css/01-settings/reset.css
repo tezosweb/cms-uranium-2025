@@ -59,11 +59,6 @@ nav, summary, label {
   scroll-margin-block-start: clamp(2em, 5em - 4vw, 5em);
 }
 
-/* web components */
-:not(:defined) {
-  display: none;
-}
-
 /* disable animations */
 @media (prefers-reduced-motion: reduce) {
 
