@@ -190,35 +190,35 @@ cmsData.post.forEach(p => {
   }
 
   publican.addContent(
-    `${ p.slug }/index.md`,`
----
-title: ${ (p.title || '').replaceAll('"', '&quot;') }
-${ p.description ? `description: ${ String(p.description).replaceAll('"', '&quot;') } ` : '' }
-status: ${ p.status }
-date: ${ p.date }
-menu: false
-priority: 1
-index: monthly
-type: ${ postType?.[ p.post_type ]?.name || 'All' }
-typeSlug: ${ postType?.[ p.post_type ]?.slug || '' }
-topic: ${ postTopic?.[ p.topic_type ]?.name || 'Insight' }
-topicSlug: ${ postTopic?.[ p.topic_type ]?.slug || 'insight' }
-${ p.feature_post ? 'featured: true' : '' }
-${ imageHero ? `imageHero: ${ imageHero }` : ''}
-${ imageThumb ? `imageThumb: ${ imageThumb }` : ''}
-${ imageSocial ? `imageSocial: ${ imageSocial }` : ''}
-${ imageAlt ? `imageAlt: ${ imageAlt }` : ''}
-${ p.show_description ? 'showDescription: true' : '' }
-${ p.show_related ? 'showRelated: true' : '' }
-${ p.author ? `author: ${ p.author }` : '' }
-${ p.source ? `source: ${ p.source }` : '' }
-${ p.source_url ? `sourceURL: ${ p.source_url }` : '' }
-${ tags.length ? `tags: ${ tags.join(',') }` : '' }
-${ groups.length ? `groups: ${ groups.join(',') }` : ''}
----
-${ content }
-`
+    `${ p.slug }/index.md`,
+    content,
+    {
+      title: (p.title || '').replaceAll('"', '&quot;'),
+      description: String(p.description || '').replaceAll('"', '&quot;'),
+      status: p.status,
+      date: p.date,
+      menu: false,
+      priority: 1,
+      index: 'monthly',
+      type: postType?.[ p.post_type ]?.name || 'All',
+      typeSlug: postType?.[ p.post_type ]?.slug || '',
+      topic: postTopic?.[ p.topic_type ]?.name || 'Insight',
+      topicSlug: postTopic?.[ p.topic_type ]?.slug || 'insight',
+      featured: p.feature_post,
+      imageHero,
+      imageThumb,
+      imageSocial,
+      imageAlt,
+      showDescription: p.show_description,
+      showRelated: p.show_related,
+      author: p.author,
+      source: p.source,
+      sourceURL: p.source_url,
+      tags,
+      groups
+    }
   );
+
 });
 
 // pass-through files
