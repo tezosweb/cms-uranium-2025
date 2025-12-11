@@ -20,7 +20,15 @@ article.highlight {
   }
 
   img, svg {
-    border-radius: var(--radius0) 0 0 var(--radius0);
+    border-radius: var(--radius1) var(--radius1) 0 0;
+  }
+
+  @media (width > 554px) {
+
+    img, svg {
+      border-radius: var(--radius1) 0 0 var(--radius1);
+    }
+
   }
 
   h1, h2, h3 {
@@ -50,6 +58,7 @@ article.highlight {
     position: static;
     display: inline-block;
     padding-inline-start: var(--pad);
+    padding-block-end: var(--pad);
     color: var(--color-back0);
   }
 

@@ -104,6 +104,11 @@ postTopic.forEach(topic => {
 
 });
 
+// blocked common tags and organizations
+const tagBlock = 'tezos,xtz,tz,crypto,currency,coin,article,post,blog,item,piece,story,paper,essay'
+  .split(',')
+  .map(t => normalize(t));
+
 // add posts from CMS
 let homeFeatured = null, rssCount = 0;
 const
@@ -127,15 +132,14 @@ cmsData.post.forEach(p => {
     ]
       .concat(p.tags || [])                           // tags
       .map(t => t.replace(/\s+/g, ' ').trim())
-      .filter(t => t &&
-        t.toLowerCase() !== 'tezos' &&
-        t.toLowerCase() !== 'article'
-      )
+      .filter(t => t && !tagBlock.includes( normalize(t) ))
       .map(t => {
         const nt = normalize(t);
         if (!tagMap.has(nt)) tagMap.set(nt, t);
         return tagMap.get(nt);
       });
+
+    tags = [ ...new Set(tags) ];
 
     // add to groups
     const pTopic = postTopic?.[ p.topic_type ]?.name || '';
