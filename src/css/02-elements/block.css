@@ -151,7 +151,7 @@ a.button {
   inline-size: fit-content;
   vertical-align: middle;
   text-decoration: none;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 1em;
   border-radius: var(--radius0);
 
   svg {
@@ -161,12 +161,12 @@ a.button {
 
   &:link, &:visited {
     color: var(--color-fore0);
-    background-color: var(--color-back2);
+    background-color: var(--color-hint2);
+    transition: background-color 0.2s linear;
   }
 
   &:hover, &:active, &:focus {
-    color: var(--color-back0);
-    background-color: var(--color-hint1);
+    background-color: var(--color-hint3);
   }
 }
 

@@ -5,14 +5,27 @@ article.highlight {
     block-size: 100%;
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--pad);
     padding-block-end: 0;
     background-color: var(--color-back4);
 
+    @media (width > 999px) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
     h1, h2, h3, p {
       color: var(--color-back0);
     }
+
+    &:hover, &:active, &:focus {
+
+      h2 {
+        color: var(--color-hint4);
+      }
+
+    }
+
   }
 
   div {
@@ -45,7 +58,7 @@ article.highlight {
 
   .topic {
     margin-block: var(--pad) 0;
-    color: var(--color-back2);
+    color: var(--color-hint4);
   }
 
   .description {

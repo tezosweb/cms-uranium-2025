@@ -2,14 +2,21 @@
 
   <div>
 
-    <p class="logo"><a href="${ tacs.root }" title="${ tacs.config.title }">
+    <p class="logo">
 
-      <svg class="uranium" width="160"><use xlink:href="#uraniumlogo"></use></svg>
-      ${ tacs.config.footerTitle ? `<span><strong>${ tacs.config.footerTitle }</strong>${ tacs.config.footerContent }</span>` : '' }
+      <a href="https://uranium.io/" title="return to the Uranium.io home page">
+        <svg class="uranium" width="160"><use xlink:href="#uraniumlogo"></use></svg>
+      </a>
 
-    </a></p>
+      <a href="${ tacs.root }" title="${ tacs.config.title }">
+        ${ tacs.config.footerTitle ? `<span><strong>${ tacs.config.footerTitle }</strong>${ tacs.config.footerContent }</span>` : '' }
+      </a>
 
-    <p><a href="https://uranium.io/" title="return to the Uranium.io home page" class="button">Uranium.io<svg class="spotlight" width="20"><use xlink:href="#arr-ur"></use></svg></a></p>
+    </p>
+
+    <p class="home">
+      <a href="https://uranium.io/" title="return to the Uranium.io home page" class="button">Uranium.io<svg width="20"><use xlink:href="#arr-ur"></use></svg></a>
+    </p>
 
   </div>
 

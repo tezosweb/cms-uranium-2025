@@ -4,9 +4,8 @@
   margin: 0;
 
   a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
-    padding-block: 1.25em;
     color: var(--color-fore0);
   }
 
@@ -17,28 +16,32 @@
   }
 
   span {
-    display: none;
+    display: inline-block;
     font-size: var(--fsize--4);
-    padding-inline-start: 1.5em;
-    margin-inline-start: 1em;
-    color: var(--color-back2);
+    padding-inline-start: min(1.6em, 1vw);
+    margin-inline-start: min(0.8em, 0.5vw);
+    color: var(--color-fore2);
     border-inline-start: 1px solid var(--color-back2);
   }
 
   strong {
     display: block;
-    font-size: var(--fsize-0);
-    font-weight: var(--font-weight-normal);
+    font-size: var(--fsize-1);
+    font-weight: 500;
     line-height: 1;
     color: var(--color-fore0);
   }
 
+}
+
+.home {
+
+  display: none;
+  font-family: var(--font-head);
+  font-weight: var(--font-weight-head);
+
   @media (width > 34em) {
-
-    span {
-      display: inline-block;
-    }
-
+    display: inline-block;
   }
 
 }

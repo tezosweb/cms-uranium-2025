@@ -1,6 +1,6 @@
 {
   "name": "cms-uranium-2025",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uranium CMS Static Site Generator (2025 version)",
   "type": "module",
   "main": "publican.config.js",
@@ -33,11 +33,11 @@
     "static site"
   ],
   "dependencies": {
-    "esbuild": "0.27.1",
+    "esbuild": "0.27.2",
     "image-meta": "0.2.2",
     "publican": "0.12.0"
   },
   "devDependencies": {
-    "livelocalhost": "1.2.4"
+    "livelocalhost": "1.2.5"
   }
 }

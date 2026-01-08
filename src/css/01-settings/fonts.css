@@ -3,7 +3,7 @@
   font-family: Raptor;
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   src: url(/media/fonts/raptor-v2-600.woff2) format('woff2');
 }
 
@@ -22,7 +22,7 @@
   font-feature-settings: 'liga' 1, 'calt' 1;
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   src: url(/media/fonts/inter.woff2) format('woff2');
 }
 

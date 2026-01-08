@@ -18,7 +18,8 @@
   }
 
   li {
-    background-color: var(--color-back1);
+    flex: 1 1 0%;
+    background-color: var(--color-back1a);
 
     &:first-child {
       padding-inline-start: 4px;
@@ -27,7 +28,7 @@
 
   a:link, a:visited {
     display: block;
-    inline-size: 5em;
+    inline-size: auto;
     text-align: center;
     text-decoration: none;
     padding-block: 0.2em;
@@ -38,7 +39,7 @@
   }
 
   li.active a, a:hover, a:active, a:focus {
-    background-color: var(--color-back2);
+    background-color: var(--color-back1c);
   }
 
   li.order {
@@ -49,31 +50,39 @@
     a {
 
       inline-size: auto;
-      border: 2px solid var(--color-back2);
+      block-size: auto;
+      border: 2px solid var(--color-back1a);
 
       &::after {
         display: inline-block;
-        content: '\25bc';
-        font-size: 0.8em;
-        text-align: center;
-        vertical-align: baseline;
-        margin-inline-start: 0.25em;
-        transition: transform 0.3s ease-out;
+        content: '';
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 6 6 6-6 6"/></svg>');
+        inline-size: 1em;
+        block-size: 1em;
+        vertical-align: middle;
+        margin-inline-start: 0.2em;
+        rotate: 90deg;
+        transition: rotate 0.3s ease-out;
       }
 
       &.old::after {
-        content: '\25b2';
+        rotate: -90deg;
       }
 
     }
 
-    a:hover::after, a:active::after, a:focus::after {
-      transform: rotate(-540deg);
+    a:hover, a:active, a:focus {
+      &::after { rotate: -450deg; }
+      &.old::after { rotate: 450deg; }
     }
 
   }
 
-  @media (width > 35em) {
+  @media (width > 38em) {
+
+    li {
+      flex: 0 0 6em;
+    }
 
     li.order {
       flex: 0 0 9em;

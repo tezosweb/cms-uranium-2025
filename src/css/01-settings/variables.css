@@ -37,18 +37,24 @@
 
   --color-back0: oklch(1.000 0.000 0);
   --color-back1: oklch(0.976 0.000 0);
+  --color-back1a: oklch(0.969 0.016 293.8);
+  --color-back1b: oklch(0.913 0.037 294.2);
+  --color-back1c: oklch(0.809 0.084 296.1);
   --color-back2: oklch(0.696 0.076 294.9);
   --color-back3: oklch(0.503 0.069 209.8);
-  --color-back4: oklch(0.390 0.068 213.7);
+  --color-back4: oklch(0.3897 0.0684 213.66);
   --color-back5: oklch(0.359 0.062 212.7);
 
   --color-fore0: oklch(0.296 0.053 217.1);
   --color-fore1: oklch(0.317 0.053 220.9);
-  --color-fore2: oklch(0.556 0.000 0);
+  --color-fore2: oklch(0.551 0.027 264.3);
   --color-fore3: oklch(0.657 0.088 210.0);
 
   --color-hint0: oklch(0.609 0.203 272);
   --color-hint1: oklch(0.390 0.127 336.1);
+  --color-hint2: oklch(0.809 0.084 296.1);
+  --color-hint3: oklch(0.696 0.076 294.9);
+  --color-hint4: oklch(0.943 0.179 118.4);
 
   --color-shad0: rgba(0,0,0,0.85);
   --color-shad1: rgba(0,0,0,0.7);

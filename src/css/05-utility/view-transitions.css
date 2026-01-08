@@ -1,0 +1,17 @@
+/* view transitions */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+/* navigation */
+.navtopic {
+  view-transition-name: navtopic;
+}
+
+/* posts */
+[id^="post-"] {
+  view-transition-name: attr(id type(<custom-ident>), none);
+  view-transition-class: post;
+}

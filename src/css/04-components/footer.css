@@ -24,7 +24,7 @@ footer {
   }
 
   a:link, a:visited, .logo a, .logo strong {
-    color: var(--color-back0);
+    color: var(--color-back1b);
   }
 
   a:hover, a:active, a:focus {
@@ -42,9 +42,24 @@ footer {
     border-block-start-color: var(--color-back3);
   }
 
+  .share {
+
+    a:link, a:visited {
+      color: var(--color-back0);
+      background-color: var(--color-back5);
+    }
+
+    a:hover, a:active, a:focus {
+      background-color: var(--color-back3);
+    }
+
+  }
+
 }
 
 .terms {
+  font-family: var(--font-head);
+  font-weight: var(--font-weight-head);
   margin-block-start: 1em;
 }
 
