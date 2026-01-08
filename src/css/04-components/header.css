@@ -9,6 +9,7 @@ header {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-block: 1.25em;
   }
 
 }

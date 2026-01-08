@@ -197,6 +197,7 @@ cmsData.post.forEach(p => {
     `${ p.slug }/index.md`,
     content,
     {
+      id: p.id,
       title: (p.title || '').replaceAll('"', '&quot;'),
       description: String(p.description || '').replaceAll('"', '&quot;'),
       status: p.status,

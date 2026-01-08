@@ -20,15 +20,6 @@
 .topic {
   font-size: var(--fsize--2);
 
-  &::after {
-    display: inline-block;
-    content: '\25BA';
-    font-size: 0.6em;
-    vertical-align: middle;
-    margin-inline-start: 0.5em;
-    color: var(--color-back3);
-  }
-
   a {
     text-decoration: none;
   }

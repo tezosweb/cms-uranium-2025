@@ -25,15 +25,24 @@
     color: var(--color-fore1);
     background-color: var(--color-back1);
     border-radius: var(--radius1);
+    overflow: hidden;
 
     &:hover, &:active, &:focus {
-      background-color: var(--color-back5);
 
-      h1, h2, h3, p {
-        color: var(--color-back0);
-        background-color: var(--color-back5);
+      figure img, figure svg {
+        scale: 1.1;
       }
+
+      h2 {
+        color: var(--color-back3);
+      }
+
     }
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
   }
 
   img, svg {
@@ -42,7 +51,9 @@
     object-fit: cover;
     padding: 0;
     margin: 0;
-    border-radius: var(--radius1) var(--radius1) 0 0;
+    object-position: 0 0;
+    transform-origin: 0 0;
+    transition: scale 0.4s ease-out;
   }
 
   h1, h2, h3, p {
@@ -105,6 +116,7 @@
     font-size: var(--fsize--4);
     padding: 0;
     margin: 0;
+    color: var(--color-fore2);
 
     inset-block-end: var(--pad-pagelist1);
     inset-inline-start: var(--pad-pagelist1);
