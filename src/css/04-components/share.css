@@ -22,7 +22,7 @@
   a:link, a:visited {
     display: block;
     color: var(--color-fore0);
-    background-color: var(--color-back1);
+    background-color: var(--color-back1b);
     border-radius: var(--radius0);
   }
 
