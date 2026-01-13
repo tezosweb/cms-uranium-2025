@@ -4,7 +4,14 @@
   margin-block-start: 3em;
 
   > .linklist {
+    justify-content: space-between;
+    text-align: start;
     margin-block-start: 2em;
+
+    p {
+      display: inline-block;
+      margin-inline-end: 1em;
+    }
 
     @media (width > 40rem) {
 
@@ -20,8 +27,17 @@
 .topic {
   font-size: var(--fsize--2);
 
-  a {
+  a:link, a:visited {
     text-decoration: none;
+    color: var(--color-back4);
+  }
+
+  a:hover, a:active, a:focus {
+    color: var(--color-back3);
+  }
+
+  span {
+    margin-inline: 0.6em;
   }
 
 }

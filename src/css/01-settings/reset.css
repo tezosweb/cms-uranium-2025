@@ -48,7 +48,7 @@ summary {
 
 a {
   text-decoration-skip-ink: auto;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 2px;
 }
 
 nav, summary, label {

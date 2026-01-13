@@ -14,19 +14,29 @@
   > div {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
     padding-block: 0;
   }
 
   h2 {
-    font-size: var(--fsize-1);
+    font-size: var(--fsize-0);
+
+    svg {
+      inline-size: 1em;
+      color: var(--color-back3);
+    }
   }
 
-  svg {
-    inline-size: auto;
+  hr {
+    margin-block-start: 1.5em;
+    border-block-start-color: var(--color-back1b);
+  }
+
+  p {
+    margin-inline-end: 1em;
   }
 
   .share {
+
     a:link, a:visited {
       background-color: var(--color-hint0-trans);
     }

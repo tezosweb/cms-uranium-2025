@@ -1,8 +1,10 @@
 /* related posts */
 .related {
 
-  margin-block-start: 4rem;
-  background-color: var(--color-back0);
+  position: relative;
+  margin-block-start: 0;
+  padding-block-start: 2rem;
+  background-image: linear-gradient(180deg, transparent 0%, var(--color-back0) 30px, var(--color-back0) 100%);
 
   hr {
     box-sizing: border-box;
