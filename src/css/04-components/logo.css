@@ -18,8 +18,8 @@
   span {
     display: inline-block;
     font-size: var(--fsize--4);
-    padding-inline-start: min(1.6em, 1vw);
-    margin-inline-start: min(0.8em, 0.5vw);
+    padding-inline-start: 1rem;
+    margin-inline-start: 1rem;
     color: var(--color-fore2);
     border-inline-start: 1px solid var(--color-back2);
   }
